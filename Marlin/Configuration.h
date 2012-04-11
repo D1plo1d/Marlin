@@ -8,12 +8,12 @@
 //User specified version info of THIS file to display in [Pronterface, etc] terminal window during startup.
 //Implementation of an idea by Prof Braino to inform user that any changes made
 //to THIS file by the user have been successfully uploaded into firmware.
-#define STRING_VERSION_CONFIG_H "2012-02-25" //Personal revision number for changes to THIS file.
-#define STRING_CONFIG_H_AUTHOR "erik" //Who made the changes.
+#define STRING_VERSION_CONFIG_H "2012-04-10" //Personal revision number for changes to THIS file.
+#define STRING_CONFIG_H_AUTHOR "d1plo1d" //Who made the changes.
 
 // This determines the communication speed of the printer
-#define BAUDRATE 250000
-//#define BAUDRATE 115200
+//#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 //// The following define selects which electronics board you have. Please choose the one that matches your setup
 // Gen7 custom (Alfons3 Version) = 10 "https://github.com/Alfons3/Generation_7_Electronics"
@@ -31,7 +31,7 @@
 // Gen3+ =9
 
 #ifndef MOTHERBOARD
-#define MOTHERBOARD 7
+#define MOTHERBOARD 7154
 #endif
 
 //===========================================================================
@@ -121,7 +121,7 @@
 const bool X_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops. 
 const bool Y_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops. 
 const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of the endstops. 
-#define DISABLE_MAX_ENDSTOPS
+//#define DISABLE_MAX_ENDSTOPS
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 #define X_ENABLE_ON 0
@@ -148,8 +148,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
 
-#define min_software_endstops true //If true, axis won't move to coordinates less than HOME_POS.
-#define max_software_endstops true  //If true, axis won't move to coordinates greater than the defined lengths below.
+#define min_software_endstops false //If true, axis won't move to coordinates less than HOME_POS.
+#define max_software_endstops false  //If true, axis won't move to coordinates greater than the defined lengths below.
 #define X_MAX_LENGTH 205
 #define Y_MAX_LENGTH 205
 #define Z_MAX_LENGTH 200
@@ -228,3 +228,4 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #include "thermistortables.h"
 
 #endif //__CONFIGURATION_H
+

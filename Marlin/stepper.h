@@ -69,3 +69,4 @@ extern block_t *current_block;  // A pointer to the block currently being traced
 
 void quickStop();
 #endif
+
